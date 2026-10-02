@@ -25,7 +25,7 @@ CryptoTrace is a frontend platform concept for authorized Law Enforcement Agenci
 - Tailwind CSS
 - Lucide React
 - Motion
-- React Flow (`@xyflow/react`)
+- React Flow
 
 ## Project Structure
 
@@ -41,91 +41,11 @@ src/
 └── main.tsx
 ```
 
-## Run Locally
-
-### Prerequisites
-
-- Node.js 20+ recommended
-- npm
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Start the development server
-
-```bash
-npm run dev
-```
-
-Open the local URL shown by Vite (normally `http://localhost:3000`).
-
-### Check TypeScript
-
-```bash
-npm run lint
-```
-
-### Create a production build
-
-```bash
-npm run build
-```
-
-### Preview the production build
-
-```bash
-npm run preview
-```
-
-## Environment Variables
-
-The current frontend-only prototype does not require production API credentials. When the backend is added, document frontend-safe variables in `.env.example` and use `.env.local` for local values.
-
-**Never commit real API keys, passwords, private keys, or other secrets to GitHub.**
-
-## Backend Integration Plan
-
-The frontend is intentionally separated from the future backend. The existing `src/services/` layer can be connected to backend endpoints later.
-
-```text
-React Frontend
-      ↓
-src/services/
-      ↓
-CryptoTrace Backend API
-      ↓
-Blockchain Intelligence Providers
-      ↓
-Wallet / Transaction / VASP Analysis
-      ↓
-Structured API Response
-      ↓
-React Frontend
-```
-
-Planned backend capabilities include secure authentication, wallet/address analysis, blockchain API integrations, transaction graph retrieval, VASP intelligence integrations, risk/alert processing, investigation persistence, report generation, and audit logging.
-
 ## Important Data Notice
 
 The current application contains mock/demo data for UI development and demonstration. It should not be treated as real investigative intelligence or as evidence of an actual VASP relationship.
 
 Live blockchain and VASP information should be obtained only from authorized, reliable data sources and handled according to applicable laws, policies, and organizational procedures.
-
-## GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial CryptoTrace frontend"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
-```
-
-Replace the repository URL with your own GitHub repository URL.
 
 ## Roadmap
 
