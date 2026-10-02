@@ -1,62 +1,95 @@
 # CryptoTrace – Blockchain Intelligence & VASP Attribution Platform
 
-CryptoTrace is a frontend platform concept for authorized Law Enforcement Agencies (LEAs) to investigate suspicious cryptocurrency wallet addresses, visualize transaction activity, organize cases, and support VASP attribution workflows.
+"Automated Crypto Wallet & VASP Attribution System"
 
-> **Current status:** Frontend prototype. The application currently uses local/mock data. Backend APIs, live blockchain intelligence providers, authentication, and production data integrations can be connected later through the existing service layer.
+📌 Overview
 
-## Features
+This project is a Blockchain Intelligence Platform designed to help Law Enforcement Agencies (LEAs) investigate suspicious cryptocurrency wallets.
 
-- Wallet investigation dashboard
-- Transaction and transaction-flow visualization
-- VASP attribution and intelligence views
-- Risk analysis and alerts
-- Cross-chain analysis UI
-- Case management
-- Investigation report UI
-- Multi-blockchain interface
-- API integration management UI
-- Lawful-request / Sahyog integration UI
+When investigators find a crypto wallet involved in fraud, ransomware, scams, or money laundering, it can be difficult to identify which Virtual Asset Service Provider (VASP) or crypto exchange is connected to that wallet.
 
-## Tech Stack
+Our system automatically analyzes blockchain transactions and traces the movement of funds to identify the nearest known VASP, exchange, or custodial wallet service.
 
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
-- Lucide React
-- Motion
-- React Flow
+🎯 Problem
 
-## Project Structure
+A suspicious crypto wallet may send funds through several intermediate wallets before reaching a crypto exchange.
 
-```text
-src/
-├── components/       # UI components and application views
-├── context/          # Shared application context
-├── data/             # Current mock/demo data
-├── services/         # Service abstraction layer for future APIs
-├── types/            # TypeScript types
-├── App.tsx
-├── index.css
-└── main.tsx
-```
+For example: Suspect Wallet ↓ Wallet A ↓ Wallet B ↓ Exchange Deposit Wallet ↓ VASP
 
-## Important Data Notice
+Finding this connection manually can take a lot of time and requires specialized blockchain knowledge.
 
-The current application contains mock/demo data for UI development and demonstration. It should not be treated as real investigative intelligence or as evidence of an actual VASP relationship.
+💡 Proposed Solution:
 
-Live blockchain and VASP information should be obtained only from authorized, reliable data sources and handled according to applicable laws, policies, and organizational procedures.
+Our platform automates this process by:
 
-## Roadmap
+Taking a suspicious wallet address as input.
+Fetching blockchain transaction data through APIs.
+Tracing the movement of cryptocurrency.
+Identifying connected wallets and transaction paths.
+Detecting known exchange/VASP wallet addresses.
+Providing a confidence score for the identified VASP.
+Showing fund movement using a visual transaction graph.
+Generating an investigation-ready report.
+🌐 Supported Blockchains
 
-- [ ] Connect frontend services to backend APIs
-- [ ] Add secure authentication and role-based access
-- [ ] Add real blockchain intelligence integrations
-- [ ] Add VASP intelligence provider integrations
-- [ ] Persist cases and investigations
-- [ ] Add production audit logging
-- [ ] Add production deployment configuration
+The system is designed to support multiple major blockchain networks, including:
 
-## License
+Bitcoin
+Ethereum
+Tron
+BNB Chain
+Solana
+Polygon
+Other supported blockchain networks
+🔑 Key Features
 
-Add the project's license here before public distribution. For a college/hackathon project, confirm the team's preferred license before choosing one.
+Wallet Investigation: Enter a suspicious wallet address and analyze its blockchain activity.
+
+Transaction Tracing: Automatically trace transactions through multiple intermediate wallets.
+
+VASP Identification: Identify exchanges, custodial wallets, deposit addresses, and other VASPs connected to the transaction flow.
+
+Confidence Scoring: Provide a confidence score to indicate how strongly the wallet is associated with a suspected VASP.
+
+Transaction Graph: Visualize how funds move from the suspicious wallet to other wallets and VASPs.
+
+Risk Analysis: Help identify potentially high-risk wallets and suspicious transaction patterns.
+
+Investigation Reports: Generate structured reports containing wallet addresses, transactions, fund movement, identified VASPs, and analysis results.
+
+SAHYOG Integration: The platform is designed to integrate with the SAHYOG ecosystem through APIs to support lawful information disclosure and asset-freezing workflows.
+
+🔄 System Workflow:
+Suspicious Wallet Address ↓ Blockchain APIs ↓ Transaction Collection ↓ Transaction & Graph Analysis ↓ Wallet / Exchange Identification ↓ VASP Attribution ↓ Confidence & Risk Score ↓ Investigation Report ↓ SAHYOG Workflow
+
+🛠️ Technology:
+
+Frontend: React.js / HTML / CSS / JavaScript
+Backend: Node.js / Express or Spring Boot
+Database: MySQL / PostgreSQL
+Blockchain APIs: APIs for supported blockchain networks
+Graph Analysis: Graph-based transaction analysis
+Visualization: Interactive transaction graphs and dashboards
+Integration: REST APIs for SAHYOG 👮 Target Users
+Law Enforcement Agencies
+Cyber Crime Investigation Teams
+Financial Crime Investigators
+Authorized Government Agencies
+🚀 Expected Benefits:
+
+Reduces manual blockchain investigation time.
+Helps identify connected VASPs faster.
+Makes complex transaction flows easier to understand.
+Supports multi-chain investigations.
+Helps investigators prepare evidence-based reports.
+Supports faster lawful disclosure and freezing requests.
+Improves investigation of cryptocurrency-related crimes.
+🔮 Future Scope:
+
+More blockchain networks.
+Advanced cross-chain transaction tracking.
+Improved wallet clustering.
+Machine-learning-based risk detection.
+Real-time suspicious transaction alerts.
+Advanced laundering-pattern detection.
+Deeper integration with government investigation systems.
